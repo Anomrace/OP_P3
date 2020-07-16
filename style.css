@@ -1,25 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 body {
   margin: 0;
   padding: 0;
-}
-
-#lne {
-  background-color: #fbdfdb;
-}
-#lcalf {
-  background-color: #fff2fe;
-}
-
-#lddp {
-  background-color: #f7f7f7;
-}
-#lddp h3 {
-  font-family: "Dancing Script", cursive;
-}
-
-#lpdg {
-  background-color: #fcfffc;
 }
 
 /*# sourceMappingURL=style.css.map */
