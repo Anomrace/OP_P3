@@ -1,0 +1,53 @@
+@use 'resetcss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@font-face{
+  font-family: 'segoe';
+  src:url('segoepr.ttf');
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+
+}
+@media screen and (min-width:0px){
+
+  header,footer{
+    background: rgb(22,160,133);
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    padding: 1em;
+  }
+
+  h1, footer a{
+    color:rgb(255,228,88);
+    margin: 0;
+  }
+main{
+
+  background: rgb(247,247,247);
+  font-family: 'segoe';
+  text-align: center;
+  h2{
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to bottom right, rgb(4, 0, 207) 25%, rgb(24,255,255) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h3{
+
+    color: rgb(41,121,255);
+  }
+  ul{
+    list-style: none;
+
+  }
+  li{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding-right: 2em;
+  }
+}
+}
