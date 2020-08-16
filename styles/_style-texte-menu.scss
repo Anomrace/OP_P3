@@ -1,35 +1,23 @@
 
+
 @media screen and (min-width:0px){
 
 
 
   main{
     text-align:center;
-    font-family: 'Croissant One', cursive;
-    background: rgb(252,239,251);
     flex-grow: 2;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
     margin: 1em;
     padding: 1em;
-  h2{
-    background: linear-gradient(to bottom right, rgb(245,127,23) 20%, rgb(179,136,255) 100%);
-    -webkit-background-clip: text;
-    margin-top: 0;
-    -webkit-text-fill-color: transparent;
 
-  }
 
-  h3{
-
-    font-family: 'Old Standard TT', serif;
-  }
   .titre{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 
     img{
       align-self: center;
-      
     }
 
     h3{
@@ -41,8 +29,10 @@
 
   ul{
     list-style:none;
-    font-family: 'Old Standard TT', serif;
     padding: 0;
+    .prix{
+      margin-left: 1em;
+    }
   }
   li{
     display: flex;
@@ -51,6 +41,44 @@
 
   }
 }
+.t1::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.1em;
+  transition: width .3s;
+
+}
+span.t1:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
+.t2::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.1em;
+  transition: width .3s;
+
+}
+span.t2:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+.t3::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.1em;
+  transition: width .3s;
+
+}
+span.t3:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
 }
 
 @media screen and (min-width:768px){
@@ -58,13 +86,25 @@
   main{
     display: flex;
     flex-direction: column;
+    margin: 7em;
 
-  }
-/*  li{
+  li{
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
     padding-left: 2em;
     padding-right: 5em;
-  }*/
+    font-size: 1.5em;
+  }
+}
+h3{
+  font-size: 2em;
+}
+}
+
+@media screen and (min-width: 1000px) {
+
+  main{
+        margin: 5em 10em 5em 10em;
+  }
 }
