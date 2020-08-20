@@ -1,7 +1,7 @@
 @use 'resetcss';
 @use 'headerfooter';
 @use 'fonts';
-@use '_style-texte-menu';
+@use 'style-texte-menu';
 
 @media screen and (min-width:0px){
 
@@ -17,13 +17,7 @@ main{
   font-family: 'segoe';
   text-align: center;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
-  .titre-menu{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
+
   h2{
     font-family: 'Dancing Script', cursive;
     background: linear-gradient(to bottom right, rgb(4, 0, 207) 25%, rgb(24,255,255) 100%);
@@ -32,13 +26,13 @@ main{
     font-size: 2em;
   }
 
-  .t1 h3{
+  .titre-menu__t1 h3{
     color: rgb(0,0,212);
   }
-  .t2 h3{
+  .titre-menu__t2 h3{
     color: rgb(13,86,240);
   }
-  .t3 h3{
+  .titre-menu__t3 h3{
     color: rgb(31,136,247);
   }
   ul{
@@ -52,13 +46,13 @@ flex-direction: column;
     font-family: 'segoe';
   }
 }
-.t1::after{
+.titre-menu__t1::after{
   background: rgb(0,0,212);
 }
-.t2::after{
+.titre-menu__t2::after{
   background: rgb(13,86,240);
 }
-.t3::after{
+.titre-menu__t3::after{
   background: rgb(31,136,247);
 }
 

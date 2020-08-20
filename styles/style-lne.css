@@ -30,8 +30,10 @@ h1, footer a {
   margin: 0;
 }
 
-h1 {
-  font-size: 3em;
+h1 a {
+  color: #ffe458;
+  font-size: 1em;
+  text-decoration: none;
 }
 
 footer {
@@ -58,16 +60,11 @@ footer a:hover {
   -webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
 }
 
-/*@media screen and (min-height:1000px){
-
-  footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3em;
   }
 }
-*/
 @font-face {
   font-family: "segoe";
   src: url("segoepr.ttf");
@@ -81,32 +78,22 @@ footer a:hover {
     margin: 1em;
     padding: 1em;
   }
-  main .titre {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-  main .titre img {
-    align-self: center;
-  }
-  main .titre h3 {
-    flex-grow: 2;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  main ul {
+
+  ul {
     list-style: none;
     padding: 0;
   }
-  main ul .prix {
-    margin-left: 1em;
+  ul .prix {
+    margin-left: 0.5em;
   }
-  main li {
+
+  li {
     display: flex;
     flex-direction: column;
     padding-bottom: 1em;
   }
 
-  .t1::after {
+  .titre-menu__t1::after {
     content: "";
     display: block;
     width: 0;
@@ -114,12 +101,12 @@ footer a:hover {
     transition: width 0.3s;
   }
 
-  span.t1:hover::after {
+  .titre-menu__t1:hover::after {
     width: 100%;
     transition: width 0.3s;
   }
 
-  .t2::after {
+  .titre-menu__t2::after {
     content: "";
     display: block;
     width: 0;
@@ -127,12 +114,12 @@ footer a:hover {
     transition: width 0.3s;
   }
 
-  span.t2:hover::after {
+  .titre-menu__t2:hover::after {
     width: 100%;
     transition: width 0.3s;
   }
 
-  .t3::after {
+  .titre-menu__t3::after {
     content: "";
     display: block;
     width: 0;
@@ -140,7 +127,7 @@ footer a:hover {
     transition: width 0.3s;
   }
 
-  span.t3:hover::after {
+  .titre-menu__t3:hover::after {
     width: 100%;
     transition: width 0.3s;
   }
@@ -157,7 +144,6 @@ footer a:hover {
     text-align: left;
     padding-left: 2em;
     padding-right: 5em;
-    font-size: 1.5em;
   }
 
   h3 {
@@ -220,15 +206,15 @@ footer a:hover {
     font-size: 2em;
   }
 
-  .t1::after {
+  .titre-menu__t1::after {
     background: #3e2723;
   }
 
-  .t2::after {
+  .titre-menu__t2::after {
     background: #3e2723;
   }
 
-  .t3::after {
+  .titre-menu__t3::after {
     background: #3e2723;
   }
 }

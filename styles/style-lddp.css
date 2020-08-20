@@ -19,34 +19,38 @@ body {
     -webkit-transform-origin: center center;
   }
 }
-header, footer {
+footer,
+header {
   background: #16a085;
-  font-family: "Source Sans Pro", sans-serif;
   text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-h1, footer a {
-  color: #ffe458;
-  margin: 0;
-}
-
+footer a,
 h1 {
-  font-size: 3em;
+  margin: 0;
+  color: #ffe458;
+}
+
+h1 a {
+  color: #ffe458;
+  text-decoration: none;
+  font-size: 1em;
 }
 
 footer {
   display: flex;
-  justify-content: space-between;
   position: sticky;
   bottom: 0;
-  padding: 0;
   margin-top: 2em;
+  padding: 0;
+  justify-content: space-between;
 }
 footer a {
-  text-decoration: none;
-  font-size: 1.1em;
   margin-top: 1em;
   margin-bottom: 1em;
+  text-decoration: none;
+  font-size: 1.1em;
 }
 footer a:first-child {
   padding-left: 1em;
@@ -58,16 +62,11 @@ footer a:hover {
   -webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
 }
 
-/*@media screen and (min-height:1000px){
-
-  footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3em;
   }
 }
-*/
 @font-face {
   font-family: "segoe";
   src: url("segoepr.ttf");
@@ -75,38 +74,36 @@ footer a:hover {
 /*font menu lcalf*/
 @media screen and (min-width: 0px) {
   main {
-    text-align: center;
-    flex-grow: 2;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
     margin: 1em;
     padding: 1em;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    flex-grow: 2;
   }
-  main .titre {
+
+  .titre-menu {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
   }
-  main .titre img {
+  .titre-menu img {
     align-self: center;
   }
-  main .titre h3 {
-    flex-grow: 2;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  main ul {
-    list-style: none;
+
+  ul {
     padding: 0;
+    list-style: none;
   }
-  main ul .prix {
-    margin-left: 1em;
+  ul .prix {
+    margin-left: 0.5em;
   }
-  main li {
+
+  li {
     display: flex;
-    flex-direction: column;
     padding-bottom: 1em;
+    flex-direction: column;
   }
 
-  .t1::after {
+  .titre-menu__t1::after {
     content: "";
     display: block;
     width: 0;
@@ -114,12 +111,12 @@ footer a:hover {
     transition: width 0.3s;
   }
 
-  span.t1:hover::after {
+  .titre-menu__t1:hover::after {
     width: 100%;
     transition: width 0.3s;
   }
 
-  .t2::after {
+  .titre-menu__t2::after {
     content: "";
     display: block;
     width: 0;
@@ -127,12 +124,12 @@ footer a:hover {
     transition: width 0.3s;
   }
 
-  span.t2:hover::after {
+  .titre-menu__t2:hover::after {
     width: 100%;
     transition: width 0.3s;
   }
 
-  .t3::after {
+  .titre-menu__t3::after {
     content: "";
     display: block;
     width: 0;
@@ -140,7 +137,7 @@ footer a:hover {
     transition: width 0.3s;
   }
 
-  span.t3:hover::after {
+  .titre-menu__t3:hover::after {
     width: 100%;
     transition: width 0.3s;
   }
@@ -148,19 +145,20 @@ footer a:hover {
 @media screen and (min-width: 768px) {
   main {
     display: flex;
-    flex-direction: column;
     margin: 7em;
+    flex-direction: column;
   }
   main li {
+    padding-right: 5em;
+    padding-left: 2em;
+    text-align: left;
     flex-direction: row;
     justify-content: space-between;
-    text-align: left;
-    padding-left: 2em;
-    padding-right: 5em;
-    font-size: 1.5em;
   }
 
   h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
     font-size: 2em;
   }
 }
@@ -181,13 +179,6 @@ footer a:hover {
     text-align: center;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
   }
-  main .titre-menu {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
   main h2 {
     font-family: "Dancing Script", cursive;
     background: linear-gradient(to bottom right, #0400cf 25%, #18ffff 100%);
@@ -195,13 +186,13 @@ footer a:hover {
     -webkit-text-fill-color: transparent;
     font-size: 2em;
   }
-  main .t1 h3 {
+  main .titre-menu__t1 h3 {
     color: #0000d4;
   }
-  main .t2 h3 {
+  main .titre-menu__t2 h3 {
     color: #0d56f0;
   }
-  main .t3 h3 {
+  main .titre-menu__t3 h3 {
     color: #1f88f7;
   }
   main ul {
@@ -214,15 +205,15 @@ footer a:hover {
     font-family: "segoe";
   }
 
-  .t1::after {
+  .titre-menu__t1::after {
     background: #0000d4;
   }
 
-  .t2::after {
+  .titre-menu__t2::after {
     background: #0d56f0;
   }
 
-  .t3::after {
+  .titre-menu__t3::after {
     background: #1f88f7;
   }
 

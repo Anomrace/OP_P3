@@ -1,64 +1,71 @@
-$background-nomain: rgb(22,160,133);
-$color-nomain: rgb(255,228,88);
+$background-nomain : rgb(22,160,133);
+$color-nomain      : rgb(255,228,88);
 
-@-webkit-keyframes shake{
-  from{
-    -webkit-transform: rotate(5deg);
+@-webkit-keyframes shake {
+  from {
+    -webkit-transform : rotate(5deg);
   }
-  to{
-    -webkit-transform:rotate(-5deg);
-    -webkit-transform-origin: center center;
-  }
-}
 
-
-header,footer{
-
-  background: $background-nomain;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: center;
-}
-h1, footer a{
-  color:$color-nomain;
-  margin: 0;
-}
-h1{
-  font-size: 3em;
-}
-footer{
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  bottom: 0;
-  padding: 0;
-  margin-top: 2em;
-  a{
-    text-decoration: none;
-    font-size: 1.1em;
-
-      margin-top: 1em;
-      margin-bottom: 1em;
-}
-    a:first-child{
-
-      padding-left: 1em;
-    }
-    a:nth-child(2){
-      padding-right: 1em;
-    }
-
-  a:hover{
-  -webkit-animation: shake .1s ease-in-out .1s infinite alternate;
+  to {
+    -webkit-transform        : rotate(-5deg);
+    -webkit-transform-origin : center center;
   }
 }
 
-/*@media screen and (min-height:1000px){
+footer,
+header {
+  background  : $background-nomain;
+  text-align  : center;
+  font-family : 'Source Sans Pro',
+                sans-serif;
+}
 
-  footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+footer a,
+h1 {
+  margin : 0;
+  color  : $color-nomain;
+}
 
+h1 {
+  a {
+    color           : $color-nomain;
+    text-decoration : none;
+    font-size       : 1em;
   }
 }
-*/
+
+footer {
+  display         : flex;
+  position        : sticky;
+  bottom          : 0;
+  margin-top      : 2em;
+  padding         : 0;
+  justify-content : space-between;
+
+  a {
+    margin-top      : 1em;
+    margin-bottom   : 1em;
+    text-decoration : none;
+    font-size       : 1.1em;
+  }
+
+  a:first-child {
+    padding-left : 1em;
+  }
+
+  a:nth-child(2) {
+    padding-right : 1em;
+  }
+
+  a:hover {
+    -webkit-animation : shake .1s ease-in-out .1s infinite alternate;
+  }
+}
+
+@media
+  screen
+  and (min-width : 768px) {
+  h1 {
+    font-size : 3em;
+  }
+}

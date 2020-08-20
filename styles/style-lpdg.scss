@@ -1,6 +1,6 @@
 @use 'resetcss';
 @use 'headerfooter';
-@use '_style-texte-menu';
+@use 'style-texte-menu';
 @use 'fonts';
 @use 'boutton';
 
@@ -21,13 +21,7 @@
       margin-top: 1em;
     }
   }
-  .titre-menu{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
+
   h2{
     background: linear-gradient(to bottom right, rgb(67,160,71) 20%, rgb(204,255,144) 100%);
     -webkit-background-clip: text;
@@ -36,16 +30,16 @@
   margin-top:0;
   font-family: 'Kaushan Script', cursive;
   }
-  .t1::after{
+  .titre-menu__t1::after{
     background: rgb(67,160,71);
   }
 
 
-  .t2::after{
+  .titre-menu__t2::after{
     background: rgb(67,160,71);
   }
 
-  .t3::after{
+  .titre-menu__t3::after{
     background: rgb(67,160,71);
   }
   span.t3:hover::after{
