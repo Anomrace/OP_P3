@@ -1,8 +1,7 @@
-@use 'resetcss';
-@use 'headerfooter';
-@use 'fonts';
-@use 'boutton';
-@use 'style-texte-menu';
+@use 'not-compiled/resetcss';
+@use 'not-compiled/headerfooter';
+@use 'not-compiled/style-texte-menu';
+@use 'not-compiled/fonts';
 
 $background-lne: rgb(250,215,210);
 $text-lne: rgb(62,39,35);
@@ -93,9 +92,6 @@ nav {
     flex-direction: column;
 
     .titre-menu {
-      h3 {
-        font-size: 2em;
-      }
       padding-left: 2em;
       padding-right: 2em;
     }

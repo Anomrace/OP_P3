@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-/*font menu lne*/
 @import url("https://fonts.googleapis.com/css2?family=Devonshire&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap");
@@ -10,73 +9,89 @@ body {
   padding: 0;
 }
 
-@-webkit-keyframes shake {
-  from {
-    -webkit-transform: rotate(5deg);
+@media screen and (min-width: 0) {
+  @-webkit-keyframes shake {
+    from {
+      -webkit-transform: rotate(5deg);
+    }
+    to {
+      -webkit-transform: rotate(-5deg);
+      -webkit-transform-origin: center center;
+    }
   }
-  to {
-    -webkit-transform: rotate(-5deg);
-    -webkit-transform-origin: center center;
+  footer,
+header {
+    background: #16a085;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  footer a,
+h1 {
+    margin: 0;
+    color: #ffe458;
+  }
+
+  h1 a {
+    color: #ffe458;
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+  footer {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    margin-top: 2em;
+    padding: 0;
+    justify-content: space-between;
+  }
+  footer a {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  footer a:first-child {
+    padding-left: 1em;
+  }
+  footer a:nth-child(2) {
+    padding-right: 1em;
+  }
+  footer a:hover {
+    -webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
   }
 }
-header, footer {
-  background: #16a085;
-  font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
-}
-
-h1, footer a {
-  color: #ffe458;
-  margin: 0;
-}
-
-h1 a {
-  color: #ffe458;
-  font-size: 1em;
-  text-decoration: none;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  bottom: 0;
-  padding: 0;
-  margin-top: 2em;
-}
-footer a {
-  text-decoration: none;
-  font-size: 1.1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-footer a:first-child {
-  padding-left: 1em;
-}
-footer a:nth-child(2) {
-  padding-right: 1em;
-}
-footer a:hover {
-  -webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
-}
-
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 3em;
   }
 }
+@media screen and (min-width: 1000px) {
+  footer {
+    margin-top: 20em;
+  }
+}
 @media screen and (min-width: 0px) {
   main {
+    margin: 1.5em;
+    padding: 1em;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     flex-grow: 2;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
-    margin: 1em;
-    padding: 1em;
+  }
+
+  .titre-menu {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .titre-menu img {
+    align-self: center;
   }
 
   ul {
-    list-style: none;
     padding: 0;
+    list-style: none;
   }
   ul .prix {
     margin-left: 0.5em;
@@ -84,15 +99,21 @@ footer a:hover {
 
   li {
     display: flex;
-    flex-direction: column;
     padding-bottom: 1em;
+    flex-direction: column;
+  }
+
+  .titre-menu__t1 {
+    position: relative;
   }
 
   .titre-menu__t1::after {
     content: "";
     display: block;
-    width: 0;
     height: 0.1em;
+    position: absolute;
+    width: 0;
+    left: 0;
     transition: width 0.3s;
   }
 
@@ -101,11 +122,17 @@ footer a:hover {
     transition: width 0.3s;
   }
 
+  .titre-menu__t2 {
+    position: relative;
+  }
+
   .titre-menu__t2::after {
     content: "";
     display: block;
-    width: 0;
     height: 0.1em;
+    position: absolute;
+    width: 0;
+    left: 0;
     transition: width 0.3s;
   }
 
@@ -114,11 +141,17 @@ footer a:hover {
     transition: width 0.3s;
   }
 
+  .titre-menu__t3 {
+    position: relative;
+  }
+
   .titre-menu__t3::after {
     content: "";
     display: block;
-    width: 0;
     height: 0.1em;
+    position: absolute;
+    width: 0;
+    left: 0;
     transition: width 0.3s;
   }
 
@@ -130,69 +163,49 @@ footer a:hover {
 @media screen and (min-width: 768px) {
   main {
     display: flex;
-    flex-direction: column;
     margin: 7em;
+    flex-direction: column;
   }
   main li {
+    padding-right: 5em;
+    padding-left: 2em;
+    text-align: left;
     flex-direction: row;
     justify-content: space-between;
-    text-align: left;
-    padding-left: 2em;
-    padding-right: 5em;
   }
 
   h3 {
-    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1em;
   }
 }
 @media screen and (min-width: 1000px) {
   main {
-    margin: 5em 10em 5em 10em;
+    margin: 6em 10em 6em 10em;
+  }
+  main h3 {
+    font-size: 1.5em;
   }
 }
 @font-face {
   font-family: "segoe";
-  src: url("segoepr.ttf");
+  src: url("font/segoepr.ttf");
 }
-/*font menu lcalf*/
 @media screen and (min-width: 0px) {
   main {
-    text-align: center;
-    background: #fcfffc;
-    flex-grow: 2;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Croissant One", cursive;
+    background: #fad7d2;
   }
   main .titre-haut img {
     height: 2.9em;
     margin-top: 1em;
   }
-  main .titre-menu {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
   main h2 {
-    background: linear-gradient(to bottom right, #43a047 20%, #ccff90 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: "Devonshire", cursive;
+    color: #3e2723;
     font-size: 2em;
     margin-top: 0;
-    font-family: "Kaushan Script", cursive;
-  }
-  main .titre-menu__t1::after {
-    background: #43a047;
-  }
-  main .titre-menu__t2::after {
-    background: #43a047;
-  }
-  main .titre-menu__t3::after {
-    background: #43a047;
-  }
-  main span.t3:hover::after {
-    width: 100%;
-    transition: width 0.3s;
   }
   main h3 {
     font-family: "segoe";
@@ -222,9 +235,22 @@ footer a:hover {
     color: #3e2723;
     font-size: 2em;
   }
+
+  .titre-menu__t1::after {
+    background: #3e2723;
+  }
+
+  .titre-menu__t2::after {
+    background: #3e2723;
+  }
+
+  .titre-menu__t3::after {
+    background: #3e2723;
+  }
 }
 nav {
   text-align: center;
+  margin-bottom: 1.5em;
 }
 nav a {
   background: #16a085;
@@ -233,7 +259,6 @@ nav a {
   text-decoration: none;
   border-radius: 20px;
   padding: 0.5em;
-  margin-bottom: 1.5em;
 }
 
 @media screen and (min-width: 768px) {
@@ -241,15 +266,9 @@ nav a {
     display: flex;
     flex-direction: column;
   }
-  main h2 {
-    font-size: 3em;
-  }
   main .titre-menu {
     padding-left: 2em;
     padding-right: 2em;
-  }
-  main .titre-menu h3 {
-    font-size: 2em;
   }
   main li {
     flex-direction: row;
@@ -258,5 +277,10 @@ nav a {
     padding-right: 2em;
   }
 }
+@media screen and (min-height: 1000px) {
+  footer {
+    position: sticky;
+  }
+}
 
-/*# sourceMappingURL=style-lpdg.css.map */
+/*# sourceMappingURL=la-note-enchantee.css.map */

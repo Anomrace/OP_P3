@@ -10,71 +10,72 @@ body {
   padding: 0;
 }
 
-@-webkit-keyframes shake {
-  from {
-    -webkit-transform: rotate(5deg);
+@media screen and (min-width: 0) {
+  @-webkit-keyframes shake {
+    from {
+      -webkit-transform: rotate(5deg);
+    }
+    to {
+      -webkit-transform: rotate(-5deg);
+      -webkit-transform-origin: center center;
+    }
   }
-  to {
-    -webkit-transform: rotate(-5deg);
-    -webkit-transform-origin: center center;
-  }
-}
-footer,
+  footer,
 header {
-  background: #16a085;
-  text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
-}
+    background: #16a085;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+  }
 
-footer a,
+  footer a,
 h1 {
-  margin: 0;
-  color: #ffe458;
-}
+    margin: 0;
+    color: #ffe458;
+  }
 
-h1 a {
-  color: #ffe458;
-  text-decoration: none;
-  font-size: 1em;
-}
+  h1 a {
+    color: #ffe458;
+    text-decoration: none;
+    font-size: 1em;
+  }
 
-footer {
-  display: flex;
-  position: sticky;
-  bottom: 0;
-  margin-top: 2em;
-  padding: 0;
-  justify-content: space-between;
+  footer {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    margin-top: 2em;
+    padding: 0;
+    justify-content: space-between;
+  }
+  footer a {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  footer a:first-child {
+    padding-left: 1em;
+  }
+  footer a:nth-child(2) {
+    padding-right: 1em;
+  }
+  footer a:hover {
+    -webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
+  }
 }
-footer a {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-decoration: none;
-  font-size: 1.1em;
-}
-footer a:first-child {
-  padding-left: 1em;
-}
-footer a:nth-child(2) {
-  padding-right: 1em;
-}
-footer a:hover {
-  -webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
-}
-
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 3em;
   }
 }
-@font-face {
-  font-family: "segoe";
-  src: url("segoepr.ttf");
+@media screen and (min-width: 1000px) {
+  footer {
+    margin-top: 20em;
+  }
 }
-/*font menu lcalf*/
 @media screen and (min-width: 0px) {
   main {
-    margin: 1em;
+    margin: 1.5em;
     padding: 1em;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
@@ -103,11 +104,17 @@ footer a:hover {
     flex-direction: column;
   }
 
+  .titre-menu__t1 {
+    position: relative;
+  }
+
   .titre-menu__t1::after {
     content: "";
     display: block;
-    width: 0;
     height: 0.1em;
+    position: absolute;
+    width: 0;
+    left: 0;
     transition: width 0.3s;
   }
 
@@ -116,11 +123,17 @@ footer a:hover {
     transition: width 0.3s;
   }
 
+  .titre-menu__t2 {
+    position: relative;
+  }
+
   .titre-menu__t2::after {
     content: "";
     display: block;
-    width: 0;
     height: 0.1em;
+    position: absolute;
+    width: 0;
+    left: 0;
     transition: width 0.3s;
   }
 
@@ -129,11 +142,17 @@ footer a:hover {
     transition: width 0.3s;
   }
 
+  .titre-menu__t3 {
+    position: relative;
+  }
+
   .titre-menu__t3::after {
     content: "";
     display: block;
-    width: 0;
     height: 0.1em;
+    position: absolute;
+    width: 0;
+    left: 0;
     transition: width 0.3s;
   }
 
@@ -159,62 +178,72 @@ footer a:hover {
   h3 {
     margin-top: 2em;
     margin-bottom: 2em;
-    font-size: 2em;
+    font-size: 1em;
   }
 }
 @media screen and (min-width: 1000px) {
   main {
-    margin: 5em 10em 5em 10em;
+    margin: 6em 10em 6em 10em;
+  }
+  main h3 {
+    font-size: 1.5em;
   }
 }
+@font-face {
+  font-family: "segoe";
+  src: url("OP_P3/font/segoepr.ttf");
+}
+/*font menu lcalf*/
 @media screen and (min-width: 0px) {
-  h1 {
-    color: #ffe458;
-    margin: 0;
-  }
-
   main {
-    background: #f7f7f7;
-    font-family: "segoe";
     text-align: center;
+    font-family: "Croissant One", cursive;
+    background: #fceffb;
+    flex-grow: 2;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
   }
+  main section:nth-of-type(1) {
+    color: #b96110;
+    margin-bottom: 1.5em;
+  }
+  main section:nth-of-type(2) {
+    color: #935187;
+    margin-bottom: 1.5em;
+  }
+  main section:nth-of-type(3) {
+    color: #3f51b5;
+    margin-bottom: 1.5em;
+  }
   main h2 {
-    font-family: "Dancing Script", cursive;
-    background: linear-gradient(to bottom right, #0400cf 25%, #18ffff 100%);
+    background: linear-gradient(to bottom right, #f57f17 20%, #b388ff 100%);
     -webkit-background-clip: text;
+    margin-top: 0;
     -webkit-text-fill-color: transparent;
-    font-size: 2em;
   }
-  main .titre-menu__t1 h3 {
-    color: #0000d4;
-  }
-  main .titre-menu__t2 h3 {
-    color: #0d56f0;
-  }
-  main .titre-menu__t3 h3 {
-    color: #1f88f7;
+  main h3 {
+    font-family: "Old Standard TT", serif;
   }
   main ul {
     list-style: none;
+    font-family: "Old Standard TT", serif;
+    padding: 0;
   }
   main li {
     display: flex;
     flex-direction: column;
-    padding-right: 2em;
-    font-family: "segoe";
+    padding-bottom: 1em;
   }
 
   .titre-menu__t1::after {
-    background: #0000d4;
+    background: #b96110;
   }
 
   .titre-menu__t2::after {
-    background: #0d56f0;
+    background: #935187;
   }
 
   .titre-menu__t3::after {
-    background: #1f88f7;
+    background: #3f51b5;
   }
 
   nav {
@@ -231,13 +260,22 @@ footer a:hover {
   }
 }
 @media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
   main li {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
-    padding-right: 2em;
-    font-family: "segoe";
+    padding-left: 2em;
+    padding-right: 5em;
   }
 }
 
-/*# sourceMappingURL=style-lddp.css.map */
+/*# sourceMappingURL=le-chic-a-la-francaise.css.map */

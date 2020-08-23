@@ -10,63 +10,72 @@ body {
   padding: 0;
 }
 
-@-webkit-keyframes shake {
-  from {
-    -webkit-transform: rotate(5deg);
+@media screen and (min-width: 0) {
+  @-webkit-keyframes shake {
+    from {
+      -webkit-transform: rotate(5deg);
+    }
+    to {
+      -webkit-transform: rotate(-5deg);
+      -webkit-transform-origin: center center;
+    }
   }
-  to {
-    -webkit-transform: rotate(-5deg);
-    -webkit-transform-origin: center center;
+  footer,
+header {
+    background: #16a085;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
   }
-}
-header, footer {
-  background: #16a085;
-  font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
-}
 
-h1, footer a {
-  color: #ffe458;
-  margin: 0;
-}
-
+  footer a,
 h1 {
-  font-size: 3em;
-}
+    margin: 0;
+    color: #ffe458;
+  }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  bottom: 0;
-  padding: 0;
-}
-footer a {
-  text-decoration: none;
-  font-size: 1.1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-footer a:first-child {
-  padding-left: 1em;
-}
-footer a:nth-child(2) {
-  padding-right: 1em;
-}
-footer a:hover {
-  -webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
-}
+  h1 a {
+    color: #ffe458;
+    text-decoration: none;
+    font-size: 1em;
+  }
 
-@media screen and (min-height: 1000px) {
   footer {
-    position: absolute;
+    display: flex;
+    position: sticky;
     bottom: 0;
-    width: 100%;
+    margin-top: 2em;
+    padding: 0;
+    justify-content: space-between;
+  }
+  footer a {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  footer a:first-child {
+    padding-left: 1em;
+  }
+  footer a:nth-child(2) {
+    padding-right: 1em;
+  }
+  footer a:hover {
+    -webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  footer {
+    margin-top: 20em;
   }
 }
 @font-face {
   font-family: "segoe";
-  src: url("segoepr.ttf");
+  src: url("font/segoepr.ttf");
 }
 /*font menu lcalf*/
 @media screen and (min-width: 0) {
@@ -175,7 +184,7 @@ footer a:hover {
   padding: 0.3em;
 }
 .boutton h3 {
-  margin: 0;
+  margin: 0.5em;
   padding-right: 2em;
   font-size: 1em;
 }
@@ -183,6 +192,7 @@ footer a:hover {
 .container {
   transform: translate(-50%, -50%);
   margin-top: 0.4em;
+  margin-right: 0.5em;
 }
 
 .dot-container {

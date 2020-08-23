@@ -1,8 +1,7 @@
-@use 'resetcss';
-@use 'headerfooter';
-@use 'style-texte-menu';
-@use 'fonts';
-@use 'boutton';
+@use 'not-compiled/resetcss';
+@use 'not-compiled/headerfooter';
+@use 'not-compiled/style-texte-menu';
+@use 'not-compiled/fonts';
 
 
 @media screen and (min-width:0px){
@@ -17,14 +16,16 @@
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
     section:nth-of-type(1){
       color: rgb(185,97, 16);
-      flex-shrink: 2;
+      margin-bottom: 1.5em;
     }
     section:nth-of-type(2){
       color: rgb(147,81,135);
+      margin-bottom: 1.5em;
     }
 
     section:nth-of-type(3){
       color: rgb(63,81,181);
+      margin-bottom: 1.5em;
     }
 
   h2{
@@ -87,6 +88,7 @@ nav{
   h2{
     font-size: 2em;
     margin-top: 2em;
+    margin-bottom: 2em;
   }
 
   li{

@@ -1,6 +1,9 @@
 $background-nomain : rgb(22,160,133);
 $color-nomain      : rgb(255,228,88);
 
+@media screen and (min-width:0) {
+
+
 @-webkit-keyframes shake {
   from {
     -webkit-transform : rotate(5deg);
@@ -61,11 +64,20 @@ footer {
     -webkit-animation : shake .1s ease-in-out .1s infinite alternate;
   }
 }
-
+}
 @media
   screen
   and (min-width : 768px) {
   h1 {
     font-size : 3em;
   }
+
+
+}
+@media
+  screen
+  and (min-width : 1000px) {
+    footer{
+      margin-top: 20em;
+    }
 }
