@@ -24,7 +24,9 @@
     font-size: 1em;
   }
 }
-
+.menu a {
+  @include effet-menu();
+}
 .menu {
   display: flex;
   flex-direction: column;
